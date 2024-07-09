@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Amrit</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="config.js"></script>
+</head>
+
+<body>
+    <div class="page" id="home">
+        <div class="menu">
+            <div class="left">
+                <p style="font-size:30px;">AMRIT SHARMA</p>
+            </div>
+            <div class="right">
+                <ul>
+                    <a href="#home">
+                        <li>Home</li>
+                    </a>
+                    <a href="#Experience">
+                        <li>Experience</li>
+                    </a>
+                    <a href="#Projects">
+                        <li>Projects</li>
+                    </a>
+                    <a href="#">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="cont-left">
+                <img src="images/myPic.png" alt="hero" width="500px" height="500px">
+            </div>
+            <div class="cont-right">
+                <p>Hello, I’m </p>
+                <p style="white-space: nowrap; text-shadow: 2px 2px 7px #5a585862;">AMRIT SHARMA</p>
+                <div class="typing-container">
+                    <p id="typing-text"></p>
+                </div>
+                <div style="display: flex; gap:20px;  margin-top:10px; scale:0.8">
+                    <button id="pdfContainer" onclick="openPDF()">Download CV</button>
+                    <button style="background: #1F2830; color:white;" id="hireMeBtn">Hire Me</button>
+                </div>
+                
+            </div>
+        </div>
+        <p id="sheet-data" style="margin-top: 25px; text-align:center; font-size:18px;">Loading...</p>
+    </div>
+    <div class="page" id="Experience">
+        <div class="heading">
+            <p style="font-size: 25px;">Explore My</p>
+            <p style="font-size: 50px; text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);">Experiences & Skills</p>
+        </div>
+        <div class="exp-cont">
+            <div class="exp-main">
+                <p>UX/UI & Graphic Designing</p>
+
+                <div style="scale: 0.95;">
+                    <div class="skill-group">
+                        <img src="images/tick.png" alt="tick" width="35px" height="35px" style="margin-right: 18px; margin-top: 8px">
+                        <div class="skill-right">
+                            <p style="font-size: 30px; color:black; font-weight:bold;">Photoshop</p>
+                            <p style="font-size: 24px; color:#505050;">Experienced</p>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <img src="images/tick.png" alt="tick" width="35px" height="35px" style="margin-right: 18px; margin-top: 8px">
+                        <div class="skill-right">
+                            <p style="font-size: 30px; color:black; font-weight:bold;">Figma</p>
+                            <p style="font-size: 24px; color:#505050;">Experienced</p>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <img src="images/tick.png" alt="tick" width="35px" height="35px" style="margin-right: 18px; margin-top: 8px">
+                        <div class="skill-right">
+                            <p style="font-size: 30px; color:black; font-weight:bold;">Corel Draw</p>
+                            <p style="font-size: 24px; color:#505050;">Experience</p>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <img src="images/tick.png" alt="tick" width="35px" height="35px" style="margin-right: 18px; margin-top: 8px">
+                        <div class="skill-right">
+                            <p style="font-size: 30px; color:black; font-weight:bold;">illustrator</p>
+                            <p style="font-size: 24px; color:#505050;">Intermediate</p>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <img src="images/tick.png" alt="tick" width="35px" height="35px" style="margin-right: 18px; margin-top: 8px">
+                        <div class="skill-right">
+                            <p style="font-size: 30px; color:black; font-weight:bold;">Wireframing</p>
+                            <p style="font-size: 24px; color:#505050;">Intermediate</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+            <div class="exp-main">
+                <p>Web Development </p>
+
+                <div style="scale: 0.95;">
+                    <div class="skill-group">
+                        <img src="images/tick.png" alt="tick" width="35px" height="35px" style="margin-right: 18px; margin-top: 8px">
+                        <div class="skill-right">
+                            <p style="font-size: 30px; color:black; font-weight:bold;">HTML</p>
+                            <p style="font-size: 24px; color:#505050;">Experienced</p>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <img src="images/tick.png" alt="tick" width="35px" height="35px" style="margin-right: 18px; margin-top: 8px">
+                        <div class="skill-right">
+                            <p style="font-size: 30px; color:black; font-weight:bold;">CSS</p>
+                            <p style="font-size: 24px; color:#505050;">Experienced</p>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <img src="images/tick.png" alt="tick" width="35px" height="35px" style="margin-right: 18px; margin-top: 8px">
+                        <div class="skill-right">
+                            <p style="font-size: 30px; color:black; font-weight:bold;">JavaScript</p>
+                            <p style="font-size: 24px; color:#505050;">Basic</p>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <img src="images/tick.png" alt="tick" width="35px" height="35px" style="margin-right: 18px; margin-top: 8px">
+                        <div class="skill-right">
+                            <p style="font-size: 30px; color:black; font-weight:bold;">MySQL</p>
+                            <p style="font-size: 24px; color:#505050;">Intermediate</p>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <img src="images/tick.png" alt="tick" width="35px" height="35px" style="margin-right: 18px; margin-top: 8px">
+                        <div class="skill-right">
+                            <p style="font-size: 30px; color:black; font-weight:bold;">PHP</p>
+                            <p style="font-size: 24px; color:#505050;">Intermediate</p>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <img src="images/tick.png" alt="tick" width="35px" height="35px" style="margin-right: 18px; margin-top: 8px">
+                        <div class="skill-right">
+                            <p style="font-size: 30px; color:black; font-weight:bold;">Python</p>
+                            <p style="font-size: 24px; color:#505050;">Intermediate</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+           
+        </div>
+        <div class="exp-pic">
+            <div class="sqr"><img src="images/photoshop.png" alt="pic" width="80px"></div>
+            <div class="sqr"><img src="images/figma.png" alt="pic" width="80px"></div>
+            <div class="sqr"><img src="images/illustrator.png" alt="pic" width="80px"></div>
+            <div class="sqr"><img src="images/corel.png" alt="pic" width="80px"></div>
+            <div class="sqr"><img src="images/js.png" alt="pic" width="80px"></div>
+            <div class="sqr"><img src="images/html-5.png" alt="pic" width="80px"></div>
+            <div class="sqr"><img src="images/css-3.png" alt="pic" width="80px"></div>
+            <div class="sqr"><img src="images/mysql.png" alt="pic" width="80px"></div>
+            <div class="sqr"><img src="images/php.png" alt="pic" width="80px"></div>
+        </div>
+    </div>
+    <div class="page" id="Projects">
+        <div class="heading">
+            <p style="font-size: 20px;">Browse My Recent</p>
+            <p style="font-size: 55px; text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);">Projects</p>
+        </div>
+        <div class="btnWithContainer">
+            <button class="nav-btn left-btn" onclick="moveCards('left')" style="font-size:25px;"><</button>
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-img" id="jalan">
+                        <!-- <iframe style="border: 0px solid rgba(0, 0, 0, 0.1);" width="100%" height="100%" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FNFoV9L17zpsSevLnzWBqRX%2Fsolar-Panel%3Ft%3DtrY2bhnjhoT1VuMD-1" allowfullscreen></iframe> -->
+                    </div>
+                    <h2 class="card-title">Jalan Technologies</h2>
+                    <p class="card-description">They have an enterprise resource planning system for solar companies. I designed a webpage for Solar System products</p>
+                    <p class="card-likes">Likes: <span class="likes-count">0</span></p>
+                    
+                    <div style="display: flex; justify-content:space-between;">
+                        <div style="display: flex; justify-content:space-between;">
+                            <button class="like-button"  id="like-button"><img src="images/heart.png" alt="heart" width="28px" height="28px"></button>
+                        </div>
+                        
+                        <div>
+
+                            <a href="https://github.com/CodeByAmrit/mom" target="_blank"><button class="action-btn">GitHub</button></a>
+                            <button class="action-btn">Live</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- mom -->
+                <div class="card">
+                    <div class="card-img" id="mom">
+                        <!-- <iframe style="border: 0px solid rgba(0, 0, 0, 0.1);" width="100%" height="100%" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FhQt4uMsCLeuh4tZUA2T2Nq%2FMom's-Landing-page%3Ft%3DtrY2bhnjhoT1VuMD-1" allowfullscreen></iframe> -->
+                    </div>
+                    <h2 class="card-title">Mom's Restaurant</h2>
+                    <p class="card-description">Designed the home page for Mom's Restaurant, a small startup known for serving high-quality coffee.</p>
+                    <p class="card-likes">Likes: <span class="likes-count">0</span></p>
+                    
+                    <div style="display: flex; justify-content:space-between;">
+                        <div style="display: flex; justify-content:space-between;">
+                            <button class="like-button"  id="like-button"><img src="images/heart.png" alt="heart" width="28px" height="28px"></button>
+                        </div>
+                        
+                        <div>
+
+                            <a href="https://github.com/CodeByAmrit/mom" target="_blank"><button class="action-btn">GitHub</button></a>
+                            <button class="action-btn">Live</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- bvm -->
+                <div class="card">
+                    <div class="card-img" id="bvm">
+                        <!-- <iframe style="border: 0;" width="100%" height="100%" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FcImPfKpLEBn4B4zsPO53Mn%2FBajrang-website%3Ft%3D3ihh430Mgza3yyNT-1" allowfullscreen></iframe> -->
+                    </div>
+                    <h2 class="card-title">Bajrang Vidya Mandir</h2>
+                    <p class="card-description">Designed and developed a website for Bajrang Vidya Mandir, enhancing their online presence and providing an easy-to-navigate platform for students, parents, and staff.</p>
+                    <p class="card-likes">Likes: <span class="likes-count">0</span></p>
+                    
+                    <div style="display: flex; justify-content:space-between;">
+                        <div style="display: flex; justify-content:space-between;">
+                            <button class="like-button"  id="like-button"><img src="images/heart.png" alt="heart" width="28px" height="28px"></button>
+                        </div>
+                        
+                        <div>
+
+                            <a href="https://github.com/CodeByAmrit/bvm" target="_blank"><button class="action-btn">GitHub</button></a>
+                            <button class="action-btn">Live</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- smartBoot -->
+                <div class="card">
+                    <div class="card-img" id="smartBoot">
+                        <!-- <iframe style="border: 0px solid rgba(0, 0, 0, 0.4);" width="100%" height="100%" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FmhPEHkUWrRGyd6Fi8v0n1t%2FSmartBoot%3Ft%3DtrY2bhnjhoT1VuMD-1" allowfullscreen></iframe> -->
+                    </div>
+                    <h2 class="card-title">SmartBoot</h2>
+                    <p class="card-description">SmartBoot is a desktop software designed to make pendrives bootable with ease. Featuring a user-friendly UI/UX, meticulously crafted by me, SmartBoot streamlines the process of creating bootable drives, ensuring a smooth and intuitive experience for users of all levels. Whether you're installing a new operating system or creating a recovery drive, SmartBoot provides a seamless solution with its clear interface and straightforward functionality.</p>
+                    <p class="card-likes">Likes: <span class="likes-count">0</span></p>
+                    
+                    <div style="display: flex; justify-content:space-between;">
+                        <div style="display: flex; justify-content:space-between;">
+                            <button class="like-button"  id="like-button"><img src="images/heart.png" alt="heart" width="28px" height="28px"></button>
+                        </div>
+                        
+                        <div>
+
+                            <a href="https://github.com/CodeByAmrit/SmartBoot" target="_blank"><button class="action-btn">GitHub</button></a>
+                            <button class="action-btn">Live</button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <button class="nav-btn right-btn" onclick="moveCards('right')" style="font-size:25px;">></button>
+            
+            <div id="figmaModal" class="modal" disabled>
+                <div class="modal-content">
+                    <span class="close" onclick="closeFigmaModal()">&times;</span>
+                    <iframe class="figma-iframe" src="" id="figma-iframe"  allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>    
+        
+        <div class="footer">
+            <p>© 2024 CodeByAmrit. All rights reserved.</p> 
+            <p id="ipaddress"></p>
+        </div>
+    </div>
+
+    <div class="go-for-more">Go for More <img src="images/down-arrows.png" width="15px" alt="arrow"></div>
+
+    <!-- hire me Button pop up -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <span class="close-btn" id="closeBtn">&times;</span>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label> 
+                <textarea name="message" id="message" width="100%"></textarea>
+                <input type="submit" value="Send Mail">
+
+            </form>
+            <div class="contact-details">
+                <p><strong>Phone:</strong> +91 9817044885</p>
+                <p><strong>Email:</strong> amritsharma54300@gmail.com</p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/amrit-sharma-b11b88124/" target="_blank">Amrit Sharma</a></p>
+                <p><strong>GitHub:</strong> <a href="https://codebyamrit.github.io/" target="_blank">codeByAmrit</a></p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

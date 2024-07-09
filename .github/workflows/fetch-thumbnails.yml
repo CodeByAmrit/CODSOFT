@@ -1,0 +1,23 @@
+name: Deploy Portfolio
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Create config.js
+      run: echo "window.FIGMA_API_KEY = '${{ secrets.FIGMA_API_KEY }}'; window.GOOGLE_SHEET_API_KEY = '${{ secrets.GOOGLE_SHEET_API_KEY }}';" > ./public/config.js
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
