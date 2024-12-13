@@ -1,5 +1,4 @@
 const FigmaAPI = window.FIGMA_API_KEY;
-const Google_sheet_API = window.GOOGLE_SHEET_API_KEY;
 
 // float effect
 window.addEventListener('load', function () {
@@ -56,13 +55,10 @@ document.addEventListener('DOMContentLoaded', function() {
 // thoughts of the day by google sheets
 // Replace with your Google Sheets API key and Sheet ID
 
-const SHEET_ID = '12HX0YN16Y6IKaH3edSjX26lwdxWPPutc_BeaMqZpCHU';
-const RANGE = 'Sheet1!A2:A16'; // Adjust the range to the entire column containing quotes
-
 async function fetchSheetData() {
     try {
         // Fetch all data from the specified column
-        const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}?key=${Google_sheet_API}`);
+        const response = await fetch(`https://sbh3cfwexnywoitgvxgdarqxra0yddyy.lambda-url.eu-north-1.on.aws/`);
         const data = await response.json();
         
         // Extract all values from the response
