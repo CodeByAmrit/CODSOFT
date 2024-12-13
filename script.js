@@ -7,12 +7,12 @@ window.addEventListener('load', function () {
 
 
 // scroll more 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     document.querySelector('.go-for-more').classList.add('hidden');
 });
 
 // typing animation 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const texts = [
         "Frontend Developer",
         "UX/UI Designer",
@@ -58,9 +58,9 @@ document.addEventListener('DOMContentLoaded', function() {
 async function fetchSheetData() {
     try {
         // Fetch all data from the specified column
-        const response = await fetch(`https://sbh3cfwexnywoitgvxgdarqxra0yddyy.lambda-url.eu-north-1.on.aws/`);
+        const response = await fetch(`https://kju7f62nqg34tv3ii7rhodubce0cgohv.lambda-url.eu-north-1.on.aws/`);
         const data = await response.json();
-        
+
         // Extract all values from the response
         const values = data.values;
         if (values && values.length > 0) {
@@ -85,21 +85,21 @@ document.addEventListener('DOMContentLoaded', fetchSheetData);
 function openPDF() {
     // URL of your PDF file
     var pdfUrl = 'images/resume.pdf';
-    
+
     // Open a new window/tab with the PDF
     window.open(pdfUrl, '_blank');
 }
 
 // hire me button pop up and close
-document.getElementById('hireMeBtn').addEventListener('click', function() {
+document.getElementById('hireMeBtn').addEventListener('click', function () {
     document.getElementById('popup').style.display = 'flex';
 });
 
-document.getElementById('closeBtn').addEventListener('click', function() {
+document.getElementById('closeBtn').addEventListener('click', function () {
     document.getElementById('popup').style.display = 'none';
 });
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
+document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault();
     alert('Thank you for your submission!');
     document.getElementById('popup').style.display = 'none';
@@ -194,46 +194,46 @@ function toggleMenu() {
 
 
 
-function getFigmaThumb(fileID, elementID) {
-    async function fetchFigmaThumbnail() {
-        const response = await fetch(`https://api.figma.com/v1/files/${fileID}`, {
-            method: 'GET',
-            headers: {
-                'X-Figma-Token': FigmaAPI
-            }
-        });
+// function getFigmaThumb(fileID, elementID) {
+//     async function fetchFigmaThumbnail() {
+//         const response = await fetch(`https://api.figma.com/v1/files/${fileID}`, {
+//             method: 'GET',
+//             headers: {
+//                 'X-Figma-Token': FigmaAPI
+//             }
+//         });
 
-        const data = await response.json();
-        const thumbnailUrl = data.thumbnailUrl;
+//         const data = await response.json();
+//         const thumbnailUrl = data.thumbnailUrl;
 
-        const thumbnailContainer = document.getElementById(elementID);
-        const thumbnailImg = document.createElement('img');
-        thumbnailImg.src = thumbnailUrl;
-        thumbnailImg.alt = 'Figma Project Thumbnail';
-        thumbnailImg.className = 'thumbnail';
-        thumbnailImg.onclick = openFigmaModal;
-        thumbnailContainer.appendChild(thumbnailImg);
-    }
+//         const thumbnailContainer = document.getElementById(elementID);
+//         const thumbnailImg = document.createElement('img');
+//         thumbnailImg.src = thumbnailUrl;
+//         thumbnailImg.alt = 'Figma Project Thumbnail';
+//         thumbnailImg.className = 'thumbnail';
+//         thumbnailImg.onclick = openFigmaModal;
+//         thumbnailContainer.appendChild(thumbnailImg);
+//     }
 
-    function openFigmaModal() {
-        const figmaModal = document.getElementById('figmaModal');
-        const figmaIframe = document.getElementById('figma-iframe');
-        figmaIframe.src = `https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/${fileID}`;
-        figmaModal.style.display = 'block';
-    }
+//     function openFigmaModal() {
+//         const figmaModal = document.getElementById('figmaModal');
+//         const figmaIframe = document.getElementById('figma-iframe');
+//         figmaIframe.src = `https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/${fileID}`;
+//         figmaModal.style.display = 'block';
+//     }
 
-    document.addEventListener('DOMContentLoaded', fetchFigmaThumbnail);
-}
+//     document.addEventListener('DOMContentLoaded', fetchFigmaThumbnail);
+// }
 
-const JalanTech = 'NFoV9L17zpsSevLnzWBqRX'; // element id = jalan
-const momRest = 'hQt4uMsCLeuh4tZUA2T2Nq'; // element id = mom
-const bvm = 'cImPfKpLEBn4B4zsPO53Mn'; // element id = bvm
-const smartBoot = 'mhPEHkUWrRGyd6Fi8v0n1t'; // element id = smartBoot
+// const JalanTech = 'NFoV9L17zpsSevLnzWBqRX'; // element id = jalan
+// const momRest = 'hQt4uMsCLeuh4tZUA2T2Nq'; // element id = mom
+// const bvm = 'cImPfKpLEBn4B4zsPO53Mn'; // element id = bvm
+// const smartBoot = 'mhPEHkUWrRGyd6Fi8v0n1t'; // element id = smartBoot
 
-getFigmaThumb(JalanTech, "jalan");
-getFigmaThumb(momRest, "mom");
-getFigmaThumb(bvm, "bvm");
-getFigmaThumb(smartBoot, "smartBoot");
+// getFigmaThumb(JalanTech, "jalan");
+// getFigmaThumb(momRest, "mom");
+// getFigmaThumb(bvm, "bvm");
+// getFigmaThumb(smartBoot, "smartBoot");
 
 function closeFigmaModal() {
     document.getElementById('figmaModal').style.display = 'none';
