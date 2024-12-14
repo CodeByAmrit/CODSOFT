@@ -51,14 +51,15 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(type, newTextDelay + 250);
 });
 
-
-// thoughts of the day by google sheets
-// Replace with your Google Sheets API key and Sheet ID
-
 async function fetchSheetData() {
     try {
         // Fetch all data from the specified column
-        const response = await fetch(`https://kju7f62nqg34tv3ii7rhodubce0cgohv.lambda-url.eu-north-1.on.aws/`);
+        const response = await fetch('https://aiduhlz5ozdmwjnayfyagqhzdm0apfil.lambda-url.ap-south-1.on.aws', {
+            method: 'GET', 
+            headers: {
+                'Content-Type': 'application/json', 
+            },
+        })
         const data = await response.json();
 
         // Extract all values from the response
