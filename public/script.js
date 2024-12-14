@@ -1,6 +1,6 @@
 const FigmaAPI = window.FIGMA_API_KEY;
 
-// float effect
+// float effect 
 window.addEventListener('load', function () {
     document.querySelector('.content').classList.add('show');
 });
@@ -55,9 +55,9 @@ async function fetchSheetData() {
     try {
         // Fetch all data from the specified column
         const response = await fetch('https://aiduhlz5ozdmwjnayfyagqhzdm0apfil.lambda-url.ap-south-1.on.aws', {
-            method: 'GET', 
+            method: 'GET',
             headers: {
-                'Content-Type': 'application/json', 
+                'Content-Type': 'application/json',
             },
         })
         const data = await response.json();
@@ -195,46 +195,43 @@ function toggleMenu() {
 
 
 
-// function getFigmaThumb(fileID, elementID) {
-//     async function fetchFigmaThumbnail() {
-//         const response = await fetch(`https://api.figma.com/v1/files/${fileID}`, {
-//             method: 'GET',
-//             headers: {
-//                 'X-Figma-Token': FigmaAPI
-//             }
-//         });
+function getFigmaThumb(fileID, elementID) {
+    async function fetchFigmaThumbnail() {
+        const response = await fetch(`https://4bofjm2dzz6pwv2b565a53zu3m0bxxjj.lambda-url.ap-south-1.on.aws/?fileID=${fileID}`, {
+            method: 'GET',
+        });
 
-//         const data = await response.json();
-//         const thumbnailUrl = data.thumbnailUrl;
+        const data = await response.json();
+        const thumbnailUrl = data.thumbnailUrl;
 
-//         const thumbnailContainer = document.getElementById(elementID);
-//         const thumbnailImg = document.createElement('img');
-//         thumbnailImg.src = thumbnailUrl;
-//         thumbnailImg.alt = 'Figma Project Thumbnail';
-//         thumbnailImg.className = 'thumbnail';
-//         thumbnailImg.onclick = openFigmaModal;
-//         thumbnailContainer.appendChild(thumbnailImg);
-//     }
+        const thumbnailContainer = document.getElementById(elementID);
+        const thumbnailImg = document.createElement('img');
+        thumbnailImg.src = thumbnailUrl;
+        thumbnailImg.alt = 'Figma Project Thumbnail';
+        thumbnailImg.className = 'thumbnail';
+        thumbnailImg.onclick = openFigmaModal;
+        thumbnailContainer.appendChild(thumbnailImg);
+    }
 
-//     function openFigmaModal() {
-//         const figmaModal = document.getElementById('figmaModal');
-//         const figmaIframe = document.getElementById('figma-iframe');
-//         figmaIframe.src = `https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/${fileID}`;
-//         figmaModal.style.display = 'block';
-//     }
+    function openFigmaModal() {
+        const figmaModal = document.getElementById('figmaModal');
+        const figmaIframe = document.getElementById('figma-iframe');
+        figmaIframe.src = `https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/${fileID}`;
+        figmaModal.style.display = 'block';
+    }
 
-//     document.addEventListener('DOMContentLoaded', fetchFigmaThumbnail);
-// }
+    document.addEventListener('DOMContentLoaded', fetchFigmaThumbnail);
+}
 
-// const JalanTech = 'NFoV9L17zpsSevLnzWBqRX'; // element id = jalan
-// const momRest = 'hQt4uMsCLeuh4tZUA2T2Nq'; // element id = mom
-// const bvm = 'cImPfKpLEBn4B4zsPO53Mn'; // element id = bvm
-// const smartBoot = 'mhPEHkUWrRGyd6Fi8v0n1t'; // element id = smartBoot
+const JalanTech = 'NFoV9L17zpsSevLnzWBqRX'; // element id = jalan
+const momRest = 'hQt4uMsCLeuh4tZUA2T2Nq'; // element id = mom
+const bvm = 'cImPfKpLEBn4B4zsPO53Mn'; // element id = bvm
+const smartBoot = 'mhPEHkUWrRGyd6Fi8v0n1t'; // element id = smartBoot
 
-// getFigmaThumb(JalanTech, "jalan");
-// getFigmaThumb(momRest, "mom");
-// getFigmaThumb(bvm, "bvm");
-// getFigmaThumb(smartBoot, "smartBoot");
+getFigmaThumb(JalanTech, "jalan");
+getFigmaThumb(momRest, "mom");
+getFigmaThumb(bvm, "bvm");
+getFigmaThumb(smartBoot, "smartBoot");
 
 function closeFigmaModal() {
     document.getElementById('figmaModal').style.display = 'none';
