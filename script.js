@@ -100,7 +100,7 @@ document.getElementById('closeBtn').addEventListener('click', function () {
     document.getElementById('popup').style.display = 'none';
 });
 
-document.getElementById('contactForm').addEventListener('submit', function (event) {
+function sendMail(event) {
     event.preventDefault();
     event.preventDefault(); // Prevent the form from refreshing the page
 
@@ -115,7 +115,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     // Open the mailto link in the user's default email client
     window.location.href = mailtoLink;
     document.getElementById('popup').style.display = 'none';
-});
+};
 
 
 // CARD MOVEEMTNS IN THIRD PAGE
