@@ -102,7 +102,18 @@ document.getElementById('closeBtn').addEventListener('click', function () {
 
 document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault();
-    alert('Thank you for your submission!');
+    event.preventDefault(); // Prevent the form from refreshing the page
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    const mailtoLink = `mailto:official@codebyamrit.co.in?subject=Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    )}`;
+
+    // Open the mailto link in the user's default email client
+    window.location.href = mailtoLink;
     document.getElementById('popup').style.display = 'none';
 });
 
